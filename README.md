@@ -1,2 +1,2 @@
-# cat-js
+# hardware-js
 test 1
