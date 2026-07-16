@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* Ton correctif pour Alpine.js (évite le flash de contenu au chargement) */
+[x-cloak] { display: none !important; }
