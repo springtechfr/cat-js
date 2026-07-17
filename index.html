@@ -331,41 +331,41 @@
 			</div>
 
 			<div x-show="inventoryStatus === 'loaded'" class="p-3 flex flex-col gap-2.5">
-<div class="flex items-center justify-between w-full gap-2 sm:gap-4">
-    <div class="flex items-center gap-2 sm:gap-3">
-        <div class="inline-flex rounded-md shadow-sm shrink-0" role="group">
-            <button type="button" x-text="$store.app.dictionary?.titles?.by_group || 'Par Groupe'"
-                    @click="displayMode = 'split'"
-                    :class="displayMode === 'split' ? 'bg-slate-700 text-white border-slate-700' : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'"
-                    class="px-3 py-2 text-xs font-semibold rounded-l-lg border transition-colors focus:outline-none">
-            </button>
-            <button type="button" 
-                    @click="displayMode = 'global'"
-                    :class="displayMode === 'global' ? 'bg-slate-700 text-white border-slate-700' : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'"
-                    class="px-3 py-2 text-xs font-semibold rounded-r-lg border-t border-b border-r transition-colors focus:outline-none">
-                Global
-            </button>
-        </div>
+				<div class="flex items-center justify-between w-full gap-2 sm:gap-4">
+					<div class="flex items-center gap-2 sm:gap-3">
+						<div class="inline-flex rounded-md shadow-sm shrink-0" role="group">
+							<button type="button" x-text="$store.app.dictionary?.titles?.by_group || 'Par Groupe'"
+									@click="displayMode = 'split'"
+									:class="displayMode === 'split' ? 'bg-slate-700 text-white border-slate-700' : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'"
+									class="px-3 py-2 text-xs font-semibold rounded-l-lg border transition-colors focus:outline-none">
+							</button>
+							<button type="button" 
+									@click="displayMode = 'global'"
+									:class="displayMode === 'global' ? 'bg-slate-700 text-white border-slate-700' : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'"
+									class="px-3 py-2 text-xs font-semibold rounded-r-lg border-t border-b border-r transition-colors focus:outline-none">
+								Global
+							</button>
+						</div>
 
-        <button @click="downloadCSV()" 
-                class="flex items-center justify-center gap-2 text-xs font-semibold py-2 px-3 sm:px-4 rounded-lg border bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-300 transition duration-150 shadow-sm focus:outline-none shrink-0"
-                title="Exporter l'inventaire">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 text-slate-500">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-            </svg>
-            <span class="hidden sm:inline">CSV</span>
-        </button>
-    </div>
+						<button @click="downloadCSV()" 
+								class="flex items-center justify-center gap-2 text-xs font-semibold py-2 px-3 sm:px-4 rounded-lg border bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-300 transition duration-150 shadow-sm focus:outline-none shrink-0"
+								title="Exporter l'inventaire">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 text-slate-500">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+							</svg>
+							<span class="hidden sm:inline">CSV</span>
+						</button>
+					</div>
 
-    <button x-show="!showCreateBlock" 
-            @click="toggleCreateBlock()" 
-            class="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2 px-3 rounded-lg border border-slate-300 transition duration-150 shadow-sm focus:outline-none shrink-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-        </svg>
-        <span x-text="$store.app.dictionary?.titles?.register_new_hardware ? $store.app.dictionary.titles.register_new_hardware : 'Ajouter'"></span>
-    </button>
-</div>
+					<button x-show="!showCreateBlock" 
+							@click="toggleCreateBlock()" 
+							class="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2 px-3 rounded-lg border border-slate-300 transition duration-150 shadow-sm focus:outline-none shrink-0">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+						</svg>
+						<span x-text="$store.app.dictionary?.titles?.register_new_hardware ? $store.app.dictionary.titles.register_new_hardware : 'Ajouter'"></span>
+					</button>
+				</div>
 
 				<div class="flex items-center gap-2 w-full">
 					<div class="relative w-[65%] sm:w-64 shrink-0">
@@ -406,7 +406,7 @@
 								<div class="col-span-1 text-right" x-text="$store.app.dictionary?.fields?.unit_count || 'Unit count'"></div>
 								<div class="col-span-1 text-right" x-text="$store.app.dictionary?.fields?.current_cost || 'Current cost'"></div>
 								<div class="col-span-1 text-right" x-text="$store.app.dictionary?.fields?.base_cost || 'Base cost'"></div>
-								<div class="col-span-1 text-right" x-text="$store.app.dictionary?.fields?.diff || 'Diff'"></div>
+								<div class="col-span-1 text-right" x-text="$store.app.dictionary?.fields?.diff_percent || 'Diff'"></div>
 								<div class="col-span-1 text-right" x-text="$store.app.dictionary?.fields?.maintenance_annual_rate || 'Maintenance rate'"></div>
 								<div class="col-span-1 text-right">Actions</div>
 							</div>
